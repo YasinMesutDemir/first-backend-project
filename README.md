@@ -6,4 +6,4 @@ De gebruiker kan ook zelf onderdelen toevoegen aan de categorieen van de website
 
 # Installatie-instructies
 
-Het installeren gaat als volgd, De repository downloaden en de files in een folder zetten. vervolgens de import.sql kopieren en in SQL terminal het plakken. De foto's moeten in de foto folder blijven. De talen HTML, PHP en CSS zijn gebruikt voor het website en database MySQL
+Het installeren gaat als volgt, De repository downloaden en de files in een folder specifiek voor de website zetten. vervolgens de import.sql kopieren en in SQL terminal het plakken. De foto's moeten in de foto folder blijven. De talen HTML, PHP en CSS zijn gebruikt voor het website en database MySQL
