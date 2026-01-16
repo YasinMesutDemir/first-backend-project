@@ -143,7 +143,6 @@ select, .radio {
         <option value="psu">Psu</option>
         <option value="coolers">Coolers</option>
       </select></form></td>
-    <td style="padding-right: 20px;"><a href="Builder.php">Builder</a></td>
     <td style="padding-right: 20px;"><a href="Builds.php">Builds</a></td>           
     <td style="padding-right: 20px;"><a href="informatie.php">Informatie</a></td>
     
@@ -155,14 +154,14 @@ select, .radio {
     <table style="background-image: url('foto/background-builder.png'); background-size: cover;" class="builder">
         <tr>
             <td>
-                <h1 class="build">Build Your Pc!</h1>
+                <h1 class="build">Welkom bij: Build Your Pc!</h1>
             </td>
         </tr>
         <tr>
           <td><a class="browse">Browse door de webshop, En hulp met het compatibiliteit van je pc</a></td>
         </tr>
         <tr>
-           <td style="padding-top: 20px;"><form action="builder.php" method="POST"><button id="builder" type="submit" name="builder">Start jou Pc Build!</button></form></td>
+           <td style="padding-top: 20px;"><form action="onderdelen.php?part=cpu" method="POST"><button id="builder" type="submit" name="builder">Start met browsen!</button></form></td>
         </tr>
     </table>
   </div>
