@@ -26,8 +26,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="foto/logo2.jpg" type="image/jpeg">
+    <title>Inloggen - PC Builder</title>
 <style>
 
 .knoppen-boven {
@@ -35,7 +39,6 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
   color: #C9C2BB;
   font-family: 'Orbitron', sans-serif;
   border-radius: 5px;
-  border: 1px solid black;
   width: 100%;
   border: 1px solid rgb(0, 208, 255);
 }
@@ -52,7 +55,6 @@ a {
 }
 
 .form {
-  background-color: black;
   border: 1px solid rgb(0, 208, 255);
   display: block;
   padding: 1rem;
@@ -69,7 +71,6 @@ a {
   line-height: 1.75rem;
   font-weight: 600;
   text-align: center;
-  color: #000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
 }
@@ -80,7 +81,6 @@ a {
 
 .input-container input, .form button {
   outline: none;
-  border: 1px solid #e5e7eb;
   margin: 8px 0;
   border: 1px solid rgb(0, 208, 255);
 }
@@ -127,37 +127,31 @@ a {
 }
 
 </style>
-    <link rel="icon" href="foto/logo2.jpg" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
 </head>
 <body>
 
 <div class="container">
-    <form method="POST">
     <table class="knoppen-boven">
   <tr>
-    <td><a href="index.php"><img src="foto/logo2.jpg" height="60"></a></td>
+    <td><a href="index.php"><img src="foto/logo2.jpg" height="60" alt="PC Builder-logo"></a></td>
     <td style="padding-left: 36%; white-space: nowrap;"><h1 style="margin: 0; color: white;">Welkom Bij Pc Builder!</h1></td>
-    <td style="text-align: right; width: 100%;">
-    <div style="display: inline-block; padding: 5px 10px;"><a href="logout.php"></a></div></td>
+    <td style="width: 100%;"></td>
   </tr>
   </table>
-  </form>
 </div>
 
 <form class="form" method="POST">
        <p class="form-title">Login in je Account!</p>
         <div class="input-container">
-          <input type="text" name="username" placeholder="Vul in gebruikersnaam">
+          <input type="text" name="username" placeholder="Vul gebruikersnaam in" aria-label="Gebruikersnaam" required>
           <span>
           </span>
       </div>
       <div class="input-container">
-          <input type="password" name="password" placeholder="Vul in wachtwoord"></div>
+          <input type="password" name="password" placeholder="Vul wachtwoord in" aria-label="Wachtwoord" required></div>
          <button type="submit" class="submit">Login</button>
 
       <p class="signup-link">Geen account? <a href="registreer.php">registreer</a></p>
    </form>
+</body>
+</html>

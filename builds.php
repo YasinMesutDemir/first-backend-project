@@ -1,17 +1,17 @@
-<?php 
-
-session_start();
+<?php session_start();
 if (!isset($_SESSION['loggedInUser'])) {
     header("Location: login.php");
     exit;
 }
-require 'database.php';
-
-?>
+require 'database.php'; ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="foto/logo2.jpg" type="image/jpeg">
+    <title>Pre-built pc's</title>
 <style>
 
 .knoppen-boven {
@@ -19,7 +19,6 @@ require 'database.php';
   color: #C9C2BB;
   font-family: 'Orbitron', sans-serif;
   border-radius: 5px;
-  border: 1px solid black;
   width: 100%;
   border: 2px solid rgb(0, 208, 255);
   
@@ -209,19 +208,15 @@ a {
     font-weight: bold;
 }
   </style>
-    <link rel="icon" href="foto/logo2.jpg" type="image/x-icon">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre-Built PC's</title>
 </head>
 <body>
 
  <table class="knoppen-boven">
   <tr>
-    <td><a href="index.php"><img src="foto/logo2.jpg" height="60"></a></td>
+    <td><a href="index.php"><img src="foto/logo2.jpg" height="60" alt="PC Builder-logo"></a></td>
     <td style="padding-right: 10px;">
       <form method="GET" action="onderdelen.php">
-        <select name="part" id="part" onchange="this.form.submit()" class="radio">
+        <select name="part" id="part" onchange="this.form.submit()" class="radio" aria-label="Kies een onderdeel">
             <option value="">Onderdelen</option>
             <option value="cpu">Cpu</option>
             <option value="gpu">Gpu</option>
@@ -234,7 +229,7 @@ a {
         </select>
       </form>
     </td>
-    <td style="padding-right: 20px;"><a href="Builds.php">Builds</a></td>
+    <td style="padding-right: 20px;"><a href="builds.php">Builds</a></td>
     <td style="padding-right: 20px;"><a href="informatie.php">Informatie</a></td>
     <td style="text-align: right; width: 100%;">
       <div style="display: inline-block; padding: 5px 10px;"><a href="logout.php">Uitloggen</a></div>

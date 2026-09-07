@@ -11,15 +11,17 @@ $toegestaan = ['cpu', 'gpu', 'motherboard', 'ram', 'storage', 'cases', 'psu', 'c
 $selected = $_GET['part'] ?? '';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onderdelen</title>
 <style>
 .knoppen-boven {
   background-color: #102031;
   color: #C9C2BB;
   font-family: 'Orbitron', sans-serif;
   border-radius: 5px;
-  border: 1px solid black;
   width: 100%;
   border: 2px solid rgb(0, 208, 255);
 }
@@ -98,18 +100,15 @@ select, .radio {
 }
 
 </style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Onderdelen</title>
 </head>
 <body>
 
 <table class="knoppen-boven">
   <tr>
-    <td><a href="index.php"><img src="foto/logo2.jpg" height="60"></a></td>
+    <td><a href="index.php"><img src="foto/logo2.jpg" height="60" alt="PC Builder-logo"></a></td>
     <td style="padding-right: 10px;">
       <form method="GET" action="onderdelen.php">
-        <select name="part" id="part" onchange="this.form.submit()" class="radio">
+        <select name="part" id="part" onchange="this.form.submit()" class="radio" aria-label="Kies een onderdeel">
             <option value="">Onderdelen</option>
             <option value="cpu">Cpu</option>
             <option value="gpu">Gpu</option>
@@ -122,7 +121,7 @@ select, .radio {
         </select>
       </form>
     </td>
-    <td style="padding-right: 20px;"><a href="Builds.php">Builds</a></td>
+    <td style="padding-right: 20px;"><a href="builds.php">Builds</a></td>
     <td style="padding-right: 20px;"><a href="informatie.php">Informatie</a></td>
     <td style="text-align: right; width: 100%;">
       <div style="display: inline-block; padding: 5px 10px;"><a href="logout.php">Uitloggen</a></div>
@@ -138,7 +137,7 @@ if (in_array($selected, $toegestaan)) {
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     if (count($rows) > 0) {
-        echo "<table class='onderdelen' border='1' cellpadding='10' cellspacing='0'>";
+        echo "<table class='onderdelen'>";
         echo "<tr>";
         foreach (array_keys($rows[0]) as $col) {
             if ($col === 'id') {
@@ -172,9 +171,6 @@ if (in_array($selected, $toegestaan)) {
 }
 ?>
 </div>
-
-</body>
-</html>
 
 </body>
 </html>
